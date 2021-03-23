@@ -1,0 +1,39 @@
+// Layout
+$Small-Mobile: 360px;
+$Mobile: 480px;
+$Mid-Mobile: 640px;
+$Small-Tablet: 758px;
+$Tablet: 960px;
+$Small-Desktop: 1024px;
+$Desktop: 1440px;
+
+// Colors
+//# Primary
+$Cyan: hsl(180, 66%, 49%);
+$Dark-Violet: hsl(257, 27%, 26%);
+
+//# Secondary
+$Red: hsl(0, 87%, 67%);
+
+//# Neutral
+$Gray: hsl(0, 0%, 75%);
+$Grayish-Violet: hsl(257, 7%, 63%);
+$Very-Dark-Blue: hsl(255, 11%, 22%);
+$Very-Dark-Violet: hsl(260, 8%, 14%);
+
+// reset
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
