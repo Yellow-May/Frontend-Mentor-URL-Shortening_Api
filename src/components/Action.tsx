@@ -1,5 +1,4 @@
 import React from "react";
-import { CopyToClipboard } from "react-copy-to-clipboard";
 
 import { AppContext } from "./../data/Store";
 import { updateUserData } from "./../data/reuseableFuncs";
