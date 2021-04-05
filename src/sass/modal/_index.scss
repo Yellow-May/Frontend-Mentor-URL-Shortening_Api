@@ -1,0 +1,71 @@
+.modal {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(black, 0.75);
+
+	button {
+		outline: none;
+		border: none;
+		background: none;
+		cursor: pointer;
+		transition: 0.25s;
+		font-size: 1em;
+
+		&.close-modal {
+			position: fixed;
+			top: 1.5rem;
+			right: 1.5rem;
+			color: rgba(white, 0.5);
+			font-size: 2em;
+
+			&:hover {
+				color: rgba(white, 1);
+			}
+		}
+	}
+
+	.modal-box {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		width: 40rem;
+		padding: 3.5rem;
+		border-radius: 2rem;
+		background: white;
+		text-align: center;
+
+		&.alert-box {
+			a.alert-link {
+				display: block;
+				margin-top: 1rem;
+				font-size: 0.875em;
+				color: $Cyan;
+			}
+
+			button.alert-btn {
+				margin-top: 1.5rem;
+				padding: 1rem 3rem;
+				border-radius: 10rem;
+				background: $Dark-Cyan;
+				color: white;
+
+				&:hover {
+					background: $Cyan;
+				}
+			}
+		}
+
+		@media (max-width: $Mid-Mobile) {
+			width: 90%;
+			padding: 2.5rem;
+		}
+	}
+
+	@import "loader";
+
+	@import "form";
+}

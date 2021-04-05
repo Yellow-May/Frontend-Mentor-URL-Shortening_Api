@@ -1,0 +1,50 @@
+.loader-box {
+	width: auto;
+
+	.loader {
+		position: relative;
+		height: 10rem;
+		width: 10rem;
+
+		div {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+
+			span {
+				position: absolute;
+				height: 1rem;
+				width: 1rem;
+				border-radius: 50%;
+				background: $Cyan;
+				transform: scale(0);
+				animation: loader1 2s linear infinite;
+			}
+		}
+
+		@keyframes loader1 {
+			0% {
+				transform: scale(1);
+			}
+			100% {
+				transform: scale(0);
+			}
+		}
+	}
+
+	@media (max-width: $Mid-Mobile) {
+		width: auto;
+
+		.loader {
+			width: 7.5rem;
+			height: 7.5rem;
+
+			div span {
+				height: 0.75rem;
+				width: 0.75rem;
+			}
+		}
+	}
+}

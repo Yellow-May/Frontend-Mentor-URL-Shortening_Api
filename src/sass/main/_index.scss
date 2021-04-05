@@ -1,0 +1,13 @@
+main {
+	width: 100%;
+	padding: 5rem 10%;
+	background: $Gray;
+
+	@import "action";
+
+	@import "statistics";
+
+	@media (max-width: $Mid-Mobile) {
+		padding: 2.5rem 5%;
+	}
+}

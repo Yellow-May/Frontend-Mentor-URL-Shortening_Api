@@ -1,0 +1,84 @@
+.intro {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	padding: 8rem 10%;
+
+	.text {
+		margin-right: 5%;
+
+		h1 {
+			font-size: 4.25em;
+			margin-bottom: 1rem;
+			line-height: 0.875;
+		}
+
+		p {
+			font-size: 1.125em;
+			margin-bottom: 2.5rem;
+			width: 90%;
+			word-spacing: 0.125rem;
+			letter-spacing: 0.125rem;
+			line-height: 1.375;
+			color: $Grayish-Violet;
+		}
+
+		button {
+			padding: 1rem 2.5rem;
+			border-radius: 10rem;
+			font-size: 1em;
+			background: $Dark-Cyan;
+			color: white;
+			outline: none;
+			border: none;
+			transition: 0.25s;
+			cursor: pointer;
+
+			&:hover {
+				background: $Cyan;
+			}
+		}
+	}
+
+	img {
+		// position: relative;
+		margin-right: -25%;
+	}
+
+	@media (max-width: $Small-Desktop) {
+		flex-direction: column-reverse;
+
+		.text {
+			margin: 3.5rem 0 0 0;
+			width: 100%;
+			text-align: center;
+
+			p {
+				width: 100%;
+			}
+		}
+
+		img {
+			margin: 0;
+			width: 100%;
+		}
+	}
+
+	@media (max-width: $Mid-Mobile) {
+		padding: 8rem 0;
+
+		.text {
+			padding: 0 5%;
+			margin-top: 2.5rem;
+
+			h1 {
+				font-size: 4em;
+			}
+		}
+
+		img {
+			margin-right: -40%;
+		}
+	}
+}

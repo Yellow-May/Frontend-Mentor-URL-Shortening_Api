@@ -1,0 +1,37 @@
+.link-text {
+	padding: 5rem;
+	width: 100%;
+	background: url(./../images/bg-boost-desktop.svg) center center no-repeat;
+	background-color: $Dark-Violet;
+	text-align: center;
+	color: white;
+
+	h2 {
+		font-size: 2em;
+		margin-bottom: 1.5rem;
+	}
+
+	button {
+		border-radius: 10rem;
+		padding: 1rem 3rem;
+		outline: none;
+		border: none;
+		background: $Dark-Cyan;
+		color: inherit;
+		cursor: pointer;
+		transition: 0.25s;
+
+		&:hover {
+			background: $Cyan;
+		}
+	}
+
+	@media (max-width: $Mid-Mobile) {
+		padding: 3rem;
+		background-image: url(./../images/bg-boost-mobile.svg) cover;
+
+		h2 {
+			margin-bottom: 1rem;
+		}
+	}
+}

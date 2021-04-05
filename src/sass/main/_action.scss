@@ -1,0 +1,181 @@
+section.action {
+	width: 100%;
+	display: grid;
+	gap: 2rem;
+	position: relative;
+	top: -10rem;
+
+	@media (max-width: $Mid-Mobile) {
+		top: -7.5rem;
+	}
+
+	form {
+		display: flex;
+		align-items: flex-start;
+		padding: 3.5rem;
+		border-radius: 0.5rem;
+		background: url(./../../images/bg-shorten-desktop.svg) center center
+			no-repeat;
+		background-color: $Dark-Violet;
+
+		@media (max-width: $Tablet) {
+			padding: 2rem;
+		}
+
+		@media (max-width: $Mid-Mobile) {
+			background-image: url(./../../images/bg-shorten-mobile.svg) cover;
+		}
+
+		.form-group {
+			flex-grow: 1;
+			margin-right: 2rem;
+
+			input {
+				width: 100%;
+				border-radius: 0.5rem;
+				border: none;
+				padding: 1.5rem;
+				outline: none;
+			}
+
+			span {
+				display: none;
+				font-size: 0.75em;
+				color: $Red;
+				padding-top: 0.5rem;
+			}
+
+			&.error {
+				input {
+					border: thin solid $Red;
+					color: $Red;
+
+					&::placeholder {
+						color: $Red;
+					}
+				}
+				span {
+					display: block;
+				}
+			}
+		}
+
+		button {
+			padding: 1.5rem 3.5rem;
+			border-radius: 0.5rem;
+			outline: none;
+			border: none;
+			cursor: pointer;
+			background: $Dark-Cyan;
+			color: white;
+			transition: 0.25s;
+
+			&:hover {
+				background: $Cyan;
+			}
+		}
+
+		@media (max-width: $Small-Tablet) {
+			padding: 1.5rem;
+			flex-direction: column;
+
+			.form-group {
+				margin-right: 0;
+				margin-bottom: 1.25rem;
+				width: 100%;
+
+				input {
+					padding: 1rem;
+					border-radius: 0.25rem;
+				}
+			}
+
+			button {
+				padding: 1rem;
+				width: 100%;
+				border-radius: 0.25rem;
+			}
+		}
+	}
+
+	ul {
+		display: inherit;
+		gap: inherit;
+
+		li {
+			display: flex;
+			align-items: center;
+			padding: 1rem;
+			border-radius: 0.5rem;
+			background: white;
+			position: relative;
+
+			.linkLong {
+				flex-grow: 1;
+				font-size: 0.875em;
+			}
+
+			.linkShort {
+				font-size: 0.875em;
+				color: $Cyan;
+				padding-right: 2rem;
+			}
+
+			button {
+				outline: none;
+				border: none;
+				cursor: pointer;
+				transition: 0.25s;
+
+				&.copy {
+					width: 7.5rem;
+					background: $Dark-Cyan;
+					color: white;
+					padding: 0.875rem 1.5rem;
+					border-radius: 0.5rem;
+
+					&:hover {
+						background: $Cyan;
+					}
+				}
+
+				&.del {
+					position: absolute;
+					left: 100%;
+					top: 0;
+					height: 100%;
+					background: none;
+					color: $Red;
+					font-size: 1.5em;
+					opacity: 0;
+					padding: 0 0.5rem;
+				}
+			}
+
+			&:hover button.del {
+				opacity: 1;
+			}
+
+			@media (max-width: $Mid-Mobile) {
+				flex-direction: column;
+
+				* {
+					min-width: 100%;
+				}
+
+				.linkShort {
+					padding: 1.5rem 0;
+				}
+
+				button.del {
+					min-width: unset;
+					height: unset;
+					right: 0.5rem;
+					top: 0.5rem;
+					left: unset;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

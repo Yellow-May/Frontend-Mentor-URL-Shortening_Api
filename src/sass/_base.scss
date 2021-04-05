@@ -1,15 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
 // Layout
 $Small-Mobile: 360px;
 $Mobile: 480px;
 $Mid-Mobile: 640px;
 $Small-Tablet: 758px;
 $Tablet: 960px;
-$Small-Desktop: 1024px;
+$Small-Desktop: 1048px;
 $Desktop: 1440px;
 
 // Colors
 //# Primary
 $Cyan: hsl(180, 66%, 49%);
+$Dark-Cyan: darken($Cyan, 15);
 $Dark-Violet: hsl(257, 27%, 26%);
 
 //# Secondary

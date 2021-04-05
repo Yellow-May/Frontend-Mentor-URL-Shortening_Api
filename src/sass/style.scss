@@ -1,0 +1,50 @@
+@import "base";
+
+body {
+	font-family: "Poppins", sans-serif;
+	font-size: 18px;
+	background: white;
+
+	@media (max-width: $Small-Desktop) {
+		font-size: 17px;
+	}
+
+	@media (max-width: $Tablet) {
+		font-size: 16px;
+	}
+
+	@media (max-width: $Small-Tablet) {
+		font-size: 15px;
+	}
+
+	@media (max-width: $Mid-Mobile) {
+		font-size: 14px;
+	}
+
+	@media (max-width: $Mobile) {
+		font-size: 13px;
+	}
+
+	@media (max-width: $Small-Mobile) {
+		font-size: 12px;
+	}
+
+	.app {
+		width: 100%;
+		height: auto;
+		position: relative;
+		overflow: hidden;
+
+		@import "header";
+
+		@import "intro";
+
+		@import "./main/index";
+
+		@import "link";
+
+		@import "footer";
+
+		@import "./modal/index";
+	}
+}

@@ -1,0 +1,92 @@
+footer {
+	width: 100%;
+	padding: 5rem 10%;
+	background: $Very-Dark-Violet;
+	color: $Gray;
+
+	display: grid;
+	grid-template-columns: 5fr 10fr 2fr;
+	gap: 1.5rem;
+
+	.links {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: flex-start;
+
+		.list {
+			margin: 0 1.5rem;
+
+			h4 {
+				font-size: 1em;
+				color: white;
+				margin-bottom: 1rem;
+			}
+
+			span {
+				display: block;
+				margin-bottom: 0.75rem;
+				font-size: 0.75em;
+				cursor: pointer;
+				transition: 0.25s;
+
+				&:hover {
+					color: white;
+				}
+			}
+		}
+	}
+
+	.social {
+		display: flex;
+
+		.icon {
+			margin: 0 1rem;
+			cursor: pointer;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			svg path {
+				transition: 0.25s;
+			}
+
+			&:hover svg path {
+				fill: $Cyan;
+			}
+		}
+	}
+
+	@media (max-width: $Small-Tablet) {
+		grid-template-columns: 1fr;
+		place-items: center;
+		gap: 3rem;
+	}
+
+	@media (max-width: $Mid-Mobile) {
+		padding: 2rem 5%;
+	}
+
+	@media (max-width: $Mobile) {
+		gap: 1rem;
+
+		.links {
+			flex-direction: column;
+			text-align: center;
+			margin: 0;
+
+			.list {
+				margin: 1rem 0;
+			}
+		}
+
+		svg {
+			transform: scale(0.875);
+			-webkit-transform: scale(0.875);
+		}
+	}
+}
