@@ -18,8 +18,6 @@ const Action = () => {
 		const res = await fetch(`https://api.shrtco.de/v2/shorten?url=${link}`);
 		const data = await res.json();
 
-		console.log(data.result);
-
 		const listData = await {
 			long: data.result.original_link,
 			short: data.result.short_link,
