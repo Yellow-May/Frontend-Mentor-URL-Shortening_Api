@@ -62,6 +62,7 @@ const Action = () => {
 						value={inpTxt}
 						onChange={handleChange}
 						autoComplete='off'
+						title='Shorten a link here'
 					/>
 					<span className='error'>
 						Please add a url link starting with 'http://' or
